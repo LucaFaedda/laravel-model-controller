@@ -11,10 +11,10 @@
             <div class='row'>
                 <div class='col-12 py-5'>
                     <div class="row">
-                            @foreach ($prodotto as $key => $fumetto)
+                            @foreach ($prodotto as  $fumetto)
             
                                 <div class="card-personalizzata">
-                                    <a href="/comics_singolo/{{ $key }}">
+                                    <a href="/comics_singolo/{id}', ['id' => $fumetto['id']])">
                                         <div class="image-container">
                                             <img src="{{$fumetto['thumb']}}">
                                         </div>

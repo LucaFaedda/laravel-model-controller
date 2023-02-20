@@ -9,11 +9,11 @@
     <div class="container mb-5">
         <div class="row ">
             <div class="col-8 d-flex flex-column justify-content-between ">
-                <h1 class="light-blu ">{{$comics_singolo['title']}}</h1>
+                <h1 class="light-blu ">{{ $singolo['title'] }}</h1>
                 <div class="row d-flex bg-green  border-bottom border-1 border-dark align-items-center py-2">
                     <div class="col-9 d-flex justify-content-between align-items-center  mt-2">
                         <div class="d-flex">
-                            <span class=" light-green">U.S. Price:</span><p class="m-0 text-light"> {{$comics_singolo['price']}}</p>
+                            <span class=" light-green">U.S. Price:</span><p class="m-0 text-light"> {{$singolo['price']}}</p>
                         </div>
                     <p class="m-0 light-green">AVAIABLE</p>
                     </div>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <p class="my-2">
-                    {{$comics_singolo['description']}}
+                    {{$singolo['description']}}
                 </p>            
             </div>
             <div class="col-4">
@@ -44,7 +44,7 @@
                             <p class="light-blu fw-bold">Art By:</p>
                         </div>
                         <div class="col-7 pt-2">
-                           <p class="light-blu-2 ">{{implode( " ,", $comics_singolo['artists'])}}</p>                           
+                           <p class="light-blu-2 ">{{ $singolo['artists']}}</p>                           
                         </div>
                     </div>
                     <div class="row d-flex justify-content-between  border-bottom border-1 ">
@@ -52,7 +52,7 @@
                             <p class="light-blu fw-bold">Written By:</p>
                         </div>
                         <div class="col-7 pt-2">
-                            <p class="light-blu-2 ">{{implode( " ,", $comics_singolo['writers'])}}</p>
+                            <p class="light-blu-2 ">{{ $singolo['writers']}}</p>
                         </div>
                     </div>
 
@@ -64,7 +64,7 @@
                             <p class="light-blu fw-bold">Series:</p>
                         </div>
                         <div class="col-7 pt-2">
-                           <p class="light-blu-2 ">{{strtoupper($comics_singolo['series'])}}</p>                           
+                           <p class="light-blu-2 ">{{strtoupper($singolo['series'])}}</p>                           
                         </div>
                     </div>
                     <div class="row d-flex justify-content-between  border-bottom border-1 ">
@@ -72,7 +72,7 @@
                             <p class="light-blu fw-bold">U.S. Price:</p>
                         </div>
                         <div class="col-7 pt-2">
-                            <p >{{$comics_singolo['price']}}</p>
+                            <p >{{$singolo['price']}}</p>
                         </div>
                     </div>
                     <div class="row d-flex justify-content-between  border-bottom border-1 ">
@@ -80,7 +80,7 @@
                             <p class="light-blu fw-bold">On Sale Date:</p>
                         </div>
                         <div class="col-7 pt-2">
-                            <p >{{$comics_singolo['sale_date']}}</p>
+                            <p >{{$singolo['sale_date']}}</p>
                         </div>
                     </div>
 
