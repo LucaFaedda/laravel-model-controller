@@ -118,22 +118,24 @@ Route::get('shop', function () {
 
 // sezione comics singolo
 
-Route::get('/comics_singolo/{series}', function ($series) {
+// Route::get('/comics_singolo/{series}', function ($series) {
 
-    $prodotto = config('comics');
-    $listaFooter = config('footer'); 
-    $listaIcone = config('icons');
-    $listaSocial= config('social');
+//     $prodotto = config('comics');
+//     $listaFooter = config('footer'); 
+//     $listaIcone = config('icons');
+//     $listaSocial= config('social');
 
-    $comics_singolo = '';
-    foreach($prodotto as $key => $fumetto){
-        if($key == $series){
-            $comics_singolo = $fumetto;
-        }
-    }
+//     $comics_singolo = '';
+//     foreach($prodotto as $key => $fumetto){
+//         if($key == $series){
+//             $comics_singolo = $fumetto;
+//         }
+//     }
     
-    // in generale si utilizzano gli ID del prodotto salvato nel db. Per questo abbiamo dovuto usare la key. 
-    // la key è la posizione nell'array.
+//     // in generale si utilizzano gli ID del prodotto salvato nel db. Per questo abbiamo dovuto usare la key. 
+//     // la key è la posizione nell'array.
     
-   return view('comics_singolo', compact( 'comics_singolo','listaFooter', 'listaIcone', 'listaSocial'));
-});
+//    return view('comics_singolo', compact( 'comics_singolo','listaFooter', 'listaIcone', 'listaSocial'));
+// });
+
+Route::get('/comics_singolo/{id}', [ComicController::class, 'show']) -> name('comics-singolo');
