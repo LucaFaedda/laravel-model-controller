@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Comicl extends Model
+class Comics extends Model //era scritto male comics
 {
     use HasFactory;
 }

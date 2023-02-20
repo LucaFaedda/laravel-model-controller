@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComicController as ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $prodotto = config('comics');
-    $listaFooter = config('footer'); 
-    $listaIcone = config('icons');
-    $listaSocial= config('social');
-    return view('home', compact('prodotto', 'listaFooter', 'listaIcone', 'listaSocial'));
-})->name('home');
+// Route::get('/', function () {
+//     $prodotto = config('comics');
+//     $listaFooter = config('footer'); 
+//     $listaIcone = config('icons');
+//     $listaSocial= config('social');
+//     return view('home', compact('prodotto', 'listaFooter', 'listaIcone', 'listaSocial'));
+// })->name('home');
+
+// rotta per passare ComicController
+
+Route::get('/', [ComicController::class, 'index']) -> name('home');
 
 // sezione caracters
 
